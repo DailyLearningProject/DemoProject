@@ -1,4 +1,4 @@
-# 1. Spring Cloud Config
+# 1. Spring Cloud Config 1
 
 # 1.1 Spring Cloud Config 服务端配置
 

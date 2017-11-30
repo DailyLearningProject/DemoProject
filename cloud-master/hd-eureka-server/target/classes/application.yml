@@ -1,0 +1,16 @@
+#eureka使用验证  配置用户名密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: hd
+    password: 123
+server:
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false    #把eureka server当作服务器，本身的客户端不启动
+    fetch-registry: false
+    serviceUrl:
+      defaultZone:  http://hd:123@localhost:8761/eureka #eureka不添加验证http://localhost:8761/eureka
+

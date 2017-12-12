@@ -18,8 +18,9 @@
 		<module>cloud-consumer</module>
 		<module>cloud-provider-user</module>
         <module>hd-eureka-server</module>
+		<module>cloud-consumer-ribbon-properties</module>
 
-    </modules>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -14,7 +14,7 @@ spring:
   application:
     name: hd-provider-user  # 当前注册的名称  最好名称全部使用小写
 server:
-  port: 7900
+  port: 7911
 logging:
   level:
     root: info

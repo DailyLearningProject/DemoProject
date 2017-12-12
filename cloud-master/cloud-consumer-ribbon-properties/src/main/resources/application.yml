@@ -1,8 +1,8 @@
 server:
-  port: 7900
+  port: 7920
 spring:
   application:
-    name: spring-boot-consumer
+    name: spring-boot-ribbon
 #配置eureka的注册中心地址
 eureka:
   client:
@@ -13,3 +13,9 @@ eureka:
     #instance-id自定义注册时status显示的信息 ${spring.application.name}：应用名称
     instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 
+#使用配置文件来配置ribbon客户端策略，这样可以不同环境使用不同策略
+#使用注册id.ribbon来进行配置
+#配置文件的配置优先于@RibbonCLient 优先于netflix默认的
+hd-provider-user:
+  ribbon:
+    NFLoadBalancerRuleClassName:  com.netflix.loadbalancer.RandomRule

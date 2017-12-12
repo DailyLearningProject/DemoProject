@@ -1,2 +1,15 @@
 server:
-  port: 7901
+  port: 7900
+spring:
+  application:
+    name: spring-boot-consumer
+#配置eureka的注册中心地址
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://hd:123@localhost:8761/eureka  #与eureka server中的地址保持一致
+  instance:
+    prefer-ip-address: true   #配置显示IP地址 注册之后，status信息上鼠标放上去显示的信息，默认为主机名称:端口，现在启动ip:端口
+    #instance-id自定义注册时status显示的信息 ${spring.application.name}：应用名称
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+

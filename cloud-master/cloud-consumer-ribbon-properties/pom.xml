@@ -9,14 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-consumer</artifactId>
-
+    <artifactId>cloud-consumer-ribbon-properties</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
     </dependencies>
-
 
 </project>

@@ -17,8 +17,10 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableEurekaClient//@EnableDiscoveryClient
 public class ProviderUserApplication {
 
+    //在run config中新启动一个这个类的启动类，然后修改yml中的端口，再次启动一个这个服务
+    //在使用restTemplate进行多次调用的时候，可以看到日志分别打印在两个不同服务的控制台，即实现了负载均衡
     public static void main(String[] args){
-        ApplicationContext ctx = SpringApplication.run(ProviderUserApplication.class,args);
+        SpringApplication.run(ProviderUserApplication.class,args);
     }
 
 }

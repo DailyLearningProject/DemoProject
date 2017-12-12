@@ -11,3 +11,7 @@
 
 > @EnableEurekaServer Eureka的服务端注解
 > @EnableEurekaClient Eureka的客户端注解
+
+## 版本V0.0.2
+- 添加了eureka服务，以及客户端的注册
+- 简单使用了ribbon的策略，以及为不同的服务分别指定不同的策略
